@@ -366,9 +366,18 @@ input[type="submit"]:hover, input[type="submit"]:focus, a.button:hover, a.button
 
 /*all media queries transitions and animations*/
 
-/*will replace this animation later with one that is my city. have not found a free one yet.*/
-
-/*not sure why. but color not changing now that i have the sun moving. need to figure this out*/
+@keyframes great-wheel-spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.great-wheel{
+  animation: 10s great-wheel-spin infinite linear;
+}
+/*
 @keyframes color-change {
   from {
     fill: #edc655;
@@ -428,7 +437,7 @@ input[type="submit"]:hover, input[type="submit"]:focus, a.button:hover, a.button
 .cloud-back{
   animation: 35s cloud-move-reverse infinite alternate linear;
 }
-
+*/
   /*for smaller screens. need to add a hamburger menu*/
 @media all and (max-width: 720px){
   /*all pages. for smaller screens*/

@@ -1,0 +1,1 @@
+I only found one issue. My logo was being stretched taller. I figured that this was because I dint specify a height. So I added a height value in my css and it fixed the issue.
