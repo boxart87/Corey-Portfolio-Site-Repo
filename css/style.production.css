@@ -175,6 +175,11 @@ a.nav-list__item--active{
   margin: 100px auto 60px auto;
   padding: 10px;
 }
+.screen-shot{
+  width: 220px;
+  height: auto;
+  border: 2px solid black;
+}
   /*portfolio grid*/
 .work__grid{
   display: -ms-grid;
@@ -214,6 +219,7 @@ img.work__grid__item{
   -ms-grid-row: 1;
   grid-row: 1/1;
 }
+/*
 .work__grid__item:nth-child(3n){
   -ms-grid-column: 4;
   grid-column: 4/4;
@@ -253,7 +259,7 @@ img.work__grid__item{
   -ms-grid-row: 4;
   grid-row: 4/4;
 }
-
+*/
 /*contact page*/
 .contact-page__body{
   min-width: 350px;
