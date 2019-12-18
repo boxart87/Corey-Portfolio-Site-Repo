@@ -88,7 +88,6 @@ h2.corey-logo{
 
 #logo{
   width: 75px;
-  height: 75px;
 }
 
 .page-header__item:first-child{
@@ -163,7 +162,7 @@ a.nav-list__item--active{
   max-width: 700px;
   height: auto;
 }
-.berlin-illustration{
+.seattle-illustration{
   width: 100%;
   height: auto;
 }
@@ -180,7 +179,7 @@ a.nav-list__item--active{
   height: auto;
   border: 2px solid black;
 }
-  /*portfolio grid*/
+  /*work grid*/
 .work__grid{
   display: -ms-grid;
   display: grid;
@@ -219,44 +218,29 @@ img.work__grid__item{
   -ms-grid-row: 1;
   grid-row: 1/1;
 }
-/*
+/*hidden until i have more projects to fill
 .work__grid__item:nth-child(3n){
-  -ms-grid-column: 4;
   grid-column: 4/4;
-  -ms-grid-row: 2;
   grid-row: 2/2;
 }
 .work__grid__item:nth-child(4n){
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-column: 1/4;
-  -ms-grid-row: 2;
   grid-row: 2/2;
 }
 .work__grid__item:nth-child(5n){
-  -ms-grid-column: 1;
   grid-column: 1/1;
-  -ms-grid-row: 3;
   grid-row: 3/3;
 }
 .work__grid__item:nth-child(6n){
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
   grid-column: 2/5;
-  -ms-grid-row: 3;
   grid-row: 3/3;
 }
 .work__grid__item:nth-child(7n){
-  -ms-grid-column: 4;
   grid-column: 4/4;
-  -ms-grid-row: 4;
   grid-row: 4/4;
 }
 .work__grid__item:last-child{
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-column: 1/4;
-  -ms-grid-row: 4;
   grid-row: 4/4;
 }
 */
@@ -488,136 +472,139 @@ a.button:focus {
 
 /*all media queries transitions and animations*/
 
-/*will replace this animation later with one that is my city. have not found a free one yet.*/
-
-/*not sure why. but color not changing now that i have the sun moving. need to figure this out*/
-@-webkit-keyframes color-change {
-  from {
-    fill: #edc655;
-  }
-  to {
-    fill: #f76414;
-  }
-}
-@keyframes color-change {
-  from {
-    fill: #edc655;
-  }
-  to {
-    fill: #f76414;
-  }
-}
-
-@-webkit-keyframes sun-move {
-  0% {
-    -webkit-transform: translate(-300px, 45px);
-            transform: translate(-300px, 45px);
-  }
-  25%{
-    -webkit-transform: translate(-200px, 15px);
-            transform: translate(-200px, 15px);
-  }
-  50% {
-    -webkit-transform: translate(-100px, 0px);
-            transform: translate(-100px, 0px);
-  }
-  75% {
-    -webkit-transform: translate(0px, 15px);
-            transform: translate(0px, 15px);
-  }
-  100% {
-    -webkit-transform: translate(100px, 45px);
-            transform: translate(100px, 45px);
-  }
-}
-
-@keyframes sun-move {
-  0% {
-    -webkit-transform: translate(-300px, 45px);
-            transform: translate(-300px, 45px);
-  }
-  25%{
-    -webkit-transform: translate(-200px, 15px);
-            transform: translate(-200px, 15px);
-  }
-  50% {
-    -webkit-transform: translate(-100px, 0px);
-            transform: translate(-100px, 0px);
-  }
-  75% {
-    -webkit-transform: translate(0px, 15px);
-            transform: translate(0px, 15px);
-  }
-  100% {
-    -webkit-transform: translate(100px, 45px);
-            transform: translate(100px, 45px);
-  }
-}
-
-@-webkit-keyframes cloud-move{
+/*new animation*/
+@-webkit-keyframes elevator-move{
   from{
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    -webkit-transform: translateY(-350px);
+            transform: translateY(-350px);
   }
   to{
-    -webkit-transform: translate(550px, 50px);
-            transform: translate(550px, 50px);
+    -webkit-transform: translateY(310px);
+            transform: translateY(310px);
   }
 }
-
-@keyframes cloud-move{
+@keyframes elevator-move{
   from{
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
+    -webkit-transform: translateY(-350px);
+            transform: translateY(-350px);
   }
   to{
-    -webkit-transform: translate(550px, 50px);
-            transform: translate(550px, 50px);
+    -webkit-transform: translateY(310px);
+            transform: translateY(310px);
   }
 }
-
-@-webkit-keyframes cloud-move-reverse{
+.elevator{
+  -webkit-animation: elevator-move 7s ease-in-out 0s infinite alternate;
+          animation: elevator-move 7s ease-in-out 0s infinite alternate;
+}
+@-webkit-keyframes rotate{
   from{
-    -webkit-transform: translate(550px, 50px);
-            transform: translate(550px, 50px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+
   }
   to{
-    -webkit-transform: translate(0px, 50px);
-            transform: translate(0px, 50px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
-
-@keyframes cloud-move-reverse{
+@keyframes rotate{
   from{
-    -webkit-transform: translate(550px, 50px);
-            transform: translate(550px, 50px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+
   }
   to{
-    -webkit-transform: translate(0px, 50px);
-            transform: translate(0px, 50px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.great-wheel{
+  transform-box: fill-box;
+  -webkit-transform-origin:center;
+          transform-origin:center;
+  -webkit-animation: rotate 30s linear infinite;
+          animation: rotate 30s linear infinite;
+}
+
+@-webkit-keyframes right-cloud-move{
+  from{
+    -webkit-transform: translateX(-1990px);
+            transform: translateX(-1990px);
+  }
+  to{
+    -webkit-transform: translateX(310px);
+            transform: translateX(310px);
   }
 }
 
-.sun{
-  -webkit-animation: 5s color-change infinite alternate linear, 30s sun-move infinite alternate linear;
-          animation: 5s color-change infinite alternate linear, 30s sun-move infinite alternate linear;
+@keyframes right-cloud-move{
+  from{
+    -webkit-transform: translateX(-1990px);
+            transform: translateX(-1990px);
+  }
+  to{
+    -webkit-transform: translateX(310px);
+            transform: translateX(310px);
+  }
+}
+.right-cloud-move{
+  -webkit-animation: right-cloud-move 35s linear infinite alternate;
+          animation: right-cloud-move 35s linear infinite alternate;
 }
 
-.sun-ray{
-  -webkit-animation: 30s sun-move infinite alternate linear;
-          animation: 30s sun-move infinite alternate linear;
+@-webkit-keyframes center-cloud-move{
+  from{
+    -webkit-transform: translateX(-1100px);
+            transform: translateX(-1100px);
+  }
+  to{
+    -webkit-transform: translateX(1250px);
+            transform: translateX(1250px);
+  }
 }
 
-.cloud-front{
-   -webkit-animation: 25s cloud-move infinite alternate linear;
-           animation: 25s cloud-move infinite alternate linear;
+@keyframes center-cloud-move{
+  from{
+    -webkit-transform: translateX(-1100px);
+            transform: translateX(-1100px);
+  }
+  to{
+    -webkit-transform: translateX(1250px);
+            transform: translateX(1250px);
+  }
 }
-.cloud-back{
-  -webkit-animation: 35s cloud-move-reverse infinite alternate linear;
-          animation: 35s cloud-move-reverse infinite alternate linear;
+.center-cloud-move{
+  -webkit-animation: center-cloud-move 60s linear infinite alternate;
+          animation: center-cloud-move 60s linear infinite alternate;
 }
 
-  /*for smaller screens. need to add a hamburger menu*/
+@-webkit-keyframes left-cloud-move{
+  from{
+    -webkit-transform: translateX(1900px);
+            transform: translateX(1900px);
+  }
+  to{
+    -webkit-transform: translateX(-350px);
+            transform: translateX(-350px);
+  }
+}
+
+@keyframes left-cloud-move{
+  from{
+    -webkit-transform: translateX(1900px);
+            transform: translateX(1900px);
+  }
+  to{
+    -webkit-transform: translateX(-350px);
+            transform: translateX(-350px);
+  }
+}
+.left-cloud-move{
+  -webkit-animation: left-cloud-move 45s linear infinite alternate;
+          animation: left-cloud-move 45s linear infinite alternate;
+}
+
 @media all and (max-width: 720px){
   /*all pages. for smaller screens*/
   h1{

@@ -155,7 +155,7 @@ a.nav-list__item--active{
   max-width: 700px;
   height: auto;
 }
-.berlin-illustration{
+.seattle-illustration{
   width: 100%;
   height: auto;
 }
@@ -366,70 +366,69 @@ input[type="submit"]:hover, input[type="submit"]:focus, a.button:hover, a.button
 
 /*all media queries transitions and animations*/
 
-/*will replace this animation later with one that is my city. have not found a free one yet.*/
-
-/*not sure why. but color not changing now that i have the sun moving. need to figure this out*/
-@keyframes color-change {
-  from {
-    fill: #edc655;
-  }
-  to {
-    fill: #f76414;
-  }
-}
-
-@keyframes sun-move {
-  0% {
-    transform: translate(-300px, 45px);
-  }
-  25%{
-    transform: translate(-200px, 15px);
-  }
-  50% {
-    transform: translate(-100px, 0px);
-  }
-  75% {
-    transform: translate(0px, 15px);
-  }
-  100% {
-    transform: translate(100px, 45px);
-  }
-}
-
-@keyframes cloud-move{
+/*new animation*/
+@keyframes elevator-move{
   from{
-    transform: translate(0, 50px);
+    transform: translateY(-350px);
   }
   to{
-    transform: translate(550px, 50px);
+    transform: translateY(310px);
   }
 }
-
-@keyframes cloud-move-reverse{
+.elevator{
+  animation: elevator-move 7s ease-in-out 0s infinite alternate;
+}
+@keyframes rotate{
   from{
-    transform: translate(550px, 50px);
+    transform: rotate(0deg);
+
   }
   to{
-    transform: translate(0px, 50px);
+    transform: rotate(360deg);
   }
 }
-
-.sun{
-  animation: 5s color-change infinite alternate linear, 30s sun-move infinite alternate linear;
+.great-wheel{
+  transform-box: fill-box;
+  transform-origin:center;
+  animation: rotate 30s linear infinite;
 }
 
-.sun-ray{
-  animation: 30s sun-move infinite alternate linear;
+@keyframes right-cloud-move{
+  from{
+    transform: translateX(-1990px);
+  }
+  to{
+    transform: translateX(310px);
+  }
+}
+.right-cloud-move{
+  animation: right-cloud-move 35s linear infinite alternate;
 }
 
-.cloud-front{
-   animation: 25s cloud-move infinite alternate linear;
+@keyframes center-cloud-move{
+  from{
+    transform: translateX(-1100px);
+  }
+  to{
+    transform: translateX(1250px);
+  }
 }
-.cloud-back{
-  animation: 35s cloud-move-reverse infinite alternate linear;
+.center-cloud-move{
+  animation: center-cloud-move 60s linear infinite alternate;
 }
 
-  /*for smaller screens. need to add a hamburger menu*/
+@keyframes left-cloud-move{
+  from{
+    transform: translateX(1900px);
+  }
+  to{
+    transform: translateX(-350px);
+  }
+}
+.left-cloud-move{
+  animation: left-cloud-move 45s linear infinite alternate;
+}
+
 @media all and (max-width: 720px){
   /*all pages. for smaller screens*/
   h1{
